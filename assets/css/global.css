@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background text-text font-mono;
+  margin: theme('spacing.margin');
+}
+
+.big-text {
+  @apply text-bold;
+}
+
+.small-text {
+  @apply text-small;
+}
+
+.emphasis-text {
+  @apply text-emphasis;
+}
+
+@media (min-width: 768px) {
+  body {
+    @apply max-w-screen-md mx-auto my-8 p-4;
+  }
+}
