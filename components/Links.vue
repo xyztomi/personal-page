@@ -1,6 +1,6 @@
 <template>
   <p class="text-lg font-bold">↓ will update soon</p>
-  <div class="max-w-md mx-auto p-4">
+  <div class="mx-auto p-4">
     <ul class="list-none mb-4">
       <li class="list-none mb-2">
         <p class="text-lg">
