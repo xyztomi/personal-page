@@ -1,5 +1,11 @@
 <template>
   <div>
-    <Introduction/>
+    <Introduction />
+    <br />
+    <MyPlaylist />
+    <br />
+    <AboutMe />
+    <br/>
+    <Links />
   </div>
 </template>

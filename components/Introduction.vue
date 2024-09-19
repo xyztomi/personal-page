@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="flex-center">
     </div>
-    <p class="big-text ">♡ tomi</p>
+    <p class="big-text font-bold">♡ tomi</p>
     <br />
     <p>here is my only fixed address.</p>
     <p>> i am friendly and thoughtful, and quite awfully pretty.</p>
