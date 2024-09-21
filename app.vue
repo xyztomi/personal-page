@@ -9,3 +9,12 @@
     <Links />
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: '♡ tomi',
+  ogTitle: '♡ tomi',
+  description: 'here is my only fixed address.',
+  ogDescription: 'here is my only fixed address.',
+})
+</script>
