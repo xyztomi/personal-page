@@ -7,7 +7,9 @@
           <span class="mr-2">&gt;</span>take a look at:
         </p>
         <ul class="list-none ml-4">
+        <nuxt-link :to="'/posts'">
           <li class="emphasis-text underline">my mid posts</li>
+        </nuxt-link>
           <li class="emphasis-text underline">my kool projects</li>
         </ul>
       </li>
