@@ -1,12 +1,14 @@
 <template>
   <div class="wrapper">
-    <img src="@/assets/images/void.gif" alt="pxArt" />
-    <br/>
+    <div class="">
+      <img src="@/assets/images/void.gif" alt="pxArt" class="w-full"/>
+    </div>
+    <br />
     <div class="divide-y divide-text">
       <div></div>
       <div></div>
     </div>
-    <br/>
+    <br />
     <div class="flex-center">
     </div>
     <p class="big-text font-bold">♡ tomi</p>
