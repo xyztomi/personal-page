@@ -2,7 +2,7 @@
   <div class="wrapper">
     <img src="@/assets/images/Myrrhage.gif" alt="pxArt" />
     <br/>
-    <div class="divide-y divide-solid border-white">
+    <div class="divide-y divide-text">
       <div></div>
       <div></div>
     </div>
