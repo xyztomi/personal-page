@@ -1,5 +1,12 @@
 <template>
   <div class="wrapper">
+    <img src="@/assets/images/Myrrhage.gif" alt="pxArt" />
+    <br/>
+    <div class="divide-y divide-solid border-white">
+      <div></div>
+      <div></div>
+    </div>
+    <br/>
     <div class="flex-center">
     </div>
     <p class="big-text font-bold">♡ tomi</p>
