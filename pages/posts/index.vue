@@ -1,3 +1,4 @@
+<!-- todo: add a back button (../) -->
 <template>
   <main>
     <h1 class="big-text font-bold">Posts</h1>
