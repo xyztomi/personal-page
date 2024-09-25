@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <img src="@/assets/images/Myrrhage.gif" alt="pxArt" />
+    <img src="@/assets/images/void.gif" alt="pxArt" />
     <br/>
     <div class="divide-y divide-text">
       <div></div>
