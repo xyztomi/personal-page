@@ -110,6 +110,14 @@
       mousePosY = event.clientY;
     });
 
+    function onTouch(event) {
+      if (!event.touches || event.touches.length === 0) return;
+      mousePosX = event.touches[0].clientX;
+      mousePosY = event.touches[0].clientY;
+    }
+    document.addEventListener("touchstart", onTouch, { passive: true });
+    document.addEventListener("touchmove", onTouch, { passive: true });
+
     window.requestAnimationFrame(onAnimationFrame);
   }
 
