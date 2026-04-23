@@ -90,7 +90,8 @@
     nekoEl.style.width = "32px";
     nekoEl.style.height = "32px";
     nekoEl.style.position = "fixed";
-    nekoEl.style.pointerEvents = "none";
+    nekoEl.style.pointerEvents = "auto";
+    nekoEl.style.cursor = "pointer";
     nekoEl.style.imageRendering = "pixelated";
     nekoEl.style.left = `${nekoPosX - 16}px`;
     nekoEl.style.top = `${nekoPosY - 16}px`;
@@ -105,18 +106,83 @@
 
     document.body.appendChild(nekoEl);
 
+    let lastInputAt = Date.now();
+
     document.addEventListener("mousemove", function (event) {
       mousePosX = event.clientX;
       mousePosY = event.clientY;
+      lastInputAt = Date.now();
     });
 
     function onTouch(event) {
       if (!event.touches || event.touches.length === 0) return;
       mousePosX = event.touches[0].clientX;
       mousePosY = event.touches[0].clientY;
+      lastInputAt = Date.now();
     }
     document.addEventListener("touchstart", onTouch, { passive: true });
     document.addEventListener("touchmove", onTouch, { passive: true });
+
+    // autopilot: wander to a random viewport point when idle for 4s+
+    setInterval(function () {
+      if (Date.now() - lastInputAt < 4000) return;
+      const pad = 40;
+      mousePosX = pad + Math.random() * Math.max(0, window.innerWidth - pad * 2);
+      mousePosY = pad + Math.random() * Math.max(0, window.innerHeight - pad * 2);
+    }, 3500);
+
+    // tap the cat for a funny quip
+    const quips = [
+      "nya",
+      "meow",
+      "ow",
+      "stop",
+      "rude",
+      ">_<",
+      "♡",
+      "zzz",
+      "purr",
+      "hire tomi",
+      "don't",
+      "(╯°□°)╯",
+      "tap tap",
+      "tomi says hi",
+    ];
+    nekoEl.style.overflow = "visible";
+    let currentBubble = null;
+    nekoEl.addEventListener("click", function (event) {
+      event.stopPropagation();
+      if (currentBubble) currentBubble.remove();
+      const bubble = document.createElement("div");
+      currentBubble = bubble;
+      bubble.textContent = quips[Math.floor(Math.random() * quips.length)];
+      Object.assign(bubble.style, {
+        position: "absolute",
+        left: "50%",
+        top: "-24px",
+        padding: "4px 8px",
+        background: "#000",
+        color: "#FFB8D3",
+        border: "1px solid #BFE2F5",
+        font: "12px/1 ui-monospace, Menlo, monospace",
+        whiteSpace: "nowrap",
+        pointerEvents: "none",
+        transform: "translate(-50%, 0)",
+        transition: "opacity .3s ease, transform .3s ease",
+        opacity: "1",
+      });
+      nekoEl.appendChild(bubble);
+      requestAnimationFrame(function () {
+        bubble.style.transform = "translate(-50%, -6px)";
+      });
+      setTimeout(function () {
+        bubble.style.opacity = "0";
+        setTimeout(function () {
+          bubble.remove();
+          if (currentBubble === bubble) currentBubble = null;
+        }, 300);
+      }, 1200);
+    });
 
     window.requestAnimationFrame(onAnimationFrame);
   }
