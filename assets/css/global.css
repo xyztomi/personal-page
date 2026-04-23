@@ -41,14 +41,6 @@ body::before {
   @apply transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300;
 }
 
-/* Hero: pixel display face for ♡ tomi */
-.hero-name {
-  font-family: theme('fontFamily.display');
-  font-size: theme('fontSize.hero');
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-}
-
 /* Blinking terminal caret */
 .caret {
   display: inline-block;

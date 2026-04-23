@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       { name: 'JetBrains Mono', provider: 'google', weights: ['400', '700'], preload: true },
-      { name: 'Silkscreen', provider: 'google', weights: ['400', '700'], preload: true },
     ],
   },
 })

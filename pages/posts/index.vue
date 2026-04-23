@@ -1,7 +1,7 @@
 <template>
   <main>
     <NuxtLink to="/" class="emphasis-text small-text">&larr; back</NuxtLink>
-    <h1 class="hero-name font-bold mt-4">posts</h1>
+    <h1 class="big-text font-bold mt-4">posts</h1>
     <hr class="rule" />
     <ContentList path="/posts" v-slot="{ list }">
       <ul class="list-none">
